@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-white text-gray-900">
         <Navbar />
-        <main className="p-4">{children}</main>
+        <main className="p-4" style={{backgroundColor: 'rgb(217, 223, 215)', color: 'rgb(71, 74, 73)' }}>{children}</main>
       </body>
     </html>
   );
