@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 /*import { Geist, Geist_Mono } from "next/font/google";*/
 import "../styles/globals.css";
 import Navbar from "@/components/Navbar";
-
 /*const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,6 +17,11 @@ export const metadata: Metadata = {
   description: "get to know yourself, inside and out. Yoga workshops and blog",
 };
 
+export const viewport: Viewport ={
+  width: "device-width",
+  initialScale: 1,
+  
+};
 
 export default function RootLayout({
   children,
@@ -28,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-white text-gray-900">
         <Navbar />
-        <main className="p-4" style={{backgroundColor: 'rgb(217, 223, 215)', color: 'rgb(71, 74, 73)' }}>{children}</main>
+        <main className="p-4 " style={{backgroundColor: 'rgb(217, 223, 215)', color: 'rgb(71, 74, 73)' }}>{children}</main>
       </body>
     </html>
   );
