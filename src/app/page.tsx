@@ -1,5 +1,6 @@
 // src/app/page.tsx
 import Image from "next/image";
+import WorkshopCard from "@/components/WorkshopCard";
 
 export default function AboutPage() {
   return (
@@ -34,7 +35,7 @@ export default function AboutPage() {
 
             </p>
           </div>
-          <div max-w-sm>
+          <div >
           <Image
             src="https://cdn.yogajournal.com/wp-content/uploads/2022/06/Upward-Facing-Dog-Mod-1_Andrew-Clark-e1670972827524.jpg?crop=535:301&width=1070&enable=upscale"
             alt="some picture"
@@ -44,21 +45,54 @@ export default function AboutPage() {
         </div>
         </div>
       </section>
-      <section id="workshop-section" className="scroll-mt-20 p-4 mr-28">
+      <section id="workshop-section" className="scroll-mt-20 p-6 max-w-4xl mx-auto">
         <hr className="rounded border-t-4 border-gray-600" />
-        <h1 className="text-center font-bold text-4xl mt-10 mb-6" style={{textDecoration: 'underline'}}>Upcoming workshops </h1>
-        <ul className="text-left p-2 mr-20 pl-10 list-disc border-8 rounded-xl border-yellow-800" >
+        <h1 className="text-center font-bold text-4xl mt-10 mb-6 underline">
+          Upcoming Workshops
+        </h1>
 
-          <li className="">Event <a href="workshop-page-id" className="font-semibold italic text-yellow-800">NAME</a> and short description goes here. <br/>Event date: <strong>25.04.2025</strong><br/>Event time: <strong>12:25</strong><br/> <br/></li>
-          <hr className="border-t-4 border-opacity-30 "/>
-          <li>Event <a href="workshop-page-id" className="font-semibold italic text-yellow-800">NAME</a> and short description goes here. <br/>Event date: <strong>25.04.2025</strong><br/>Event time: <strong>12:25</strong><br/> <br/></li>
-           <hr className="border-t-4 border-opacity-30 "/>
-          <li>Event <a href="workshop-page-id" className="font-semibold italic text-yellow-800">NAME</a> and short description goes here. <br/>Event date: <strong>25.04.2025</strong><br/>Event time: <strong>12:25</strong><br/> <br/></li>
-           <hr className="border-t-4 border-opacity-30 "/>
-          <li>Event <a href="workshop-page-id" className="font-semibold italic text-yellow-800">NAME</a> and short description goes here. <br/>Event date: <strong>25.04.2025</strong><br/>Event time: <strong>12:25</strong><br/> <br/></li>
-           <hr className="border-t-4 border-opacity-30 "/>
-          <li>Event <a href="workshop-page-id" className="font-semibold italic text-yellow-800">NAME</a> and short description goes here. <br/>Event date: <strong>25.04.2025</strong><br/>Event time: <strong>12:25</strong><br/> <br/></li>
-        </ul>
+        <div className="space-y-4">
+          {/* Workshop card */}
+          <WorkshopCard
+            name="Intro to Somatics"
+            description="Explore mindful movement and inner awareness"
+            date="25.06.2025"
+            time="12:25"
+            place="Belgrade"
+            href="/workshops/intro-to-somatics"
+          />
+          <WorkshopCard
+            name="Yoga & Breath"
+            description="A deep dive into breath-guided asanas"
+            date="12.07.2025"
+            time="10:00"
+            place="Novi Sad"
+            href="/workshops/yoga-breath"
+          />
+          <WorkshopCard
+            name="Intro to Somatics"
+            description="Explore mindful movement and inner awareness"
+            date="25.06.2025"
+            time="12:25"
+            place="Belgrade"
+            href="/workshops/intro-to-somatics"
+          />
+          <WorkshopCard
+            name="Yoga & Breath"
+            description="A deep dive into breath-guided asanas"
+            date="12.07.2025"
+            time="10:00"
+            place="Novi Sad"
+            href="/workshops/yoga-breath"
+          />
+        </div>
+      </section>
+      <section id="blog-section" className="scroll-mt-20 p-6 max-w-4xl mx-auto">
+        <hr className="rounded border-t-4 border-gray-600" />
+        <h1 className="text-center font-bold text-4xl mt-10 mb-6 underline">
+          Blog
+        </h1>
+        <p className="break-words text-center">Blog brate Bruklin brate blog Bruklin bato</p>
       </section>
     </div>
   );
