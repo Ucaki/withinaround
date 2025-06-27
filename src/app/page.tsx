@@ -1,6 +1,7 @@
 // src/app/page.tsx
 import Image from "next/image";
 import WorkshopCard from "@/components/WorkshopCard";
+import { workshopList } from "@/lib/workshopData";
 
 export default function AboutPage() {
   return (
@@ -53,38 +54,17 @@ export default function AboutPage() {
 
         <div className="space-y-4">
           {/* Workshop card */}
+          {workshopList.map((card)=>
           <WorkshopCard
-            name="Intro to Somatics"
-            description="Explore mindful movement and inner awareness"
-            date="25.06.2025"
-            time="12:25"
-            place="Belgrade"
-            href="/workshops/intro-to-somatics"
-          />
-          <WorkshopCard
-            name="Yoga & Breath"
-            description="A deep dive into breath-guided asanas"
-            date="12.07.2025"
-            time="10:00"
-            place="Novi Sad"
-            href="/workshops/yoga-breath"
-          />
-          <WorkshopCard
-            name="Intro to Somatics"
-            description="Explore mindful movement and inner awareness"
-            date="25.06.2025"
-            time="12:25"
-            place="Belgrade"
-            href="/workshops/intro-to-somatics"
-          />
-          <WorkshopCard
-            name="Yoga & Breath"
-            description="A deep dive into breath-guided asanas"
-            date="12.07.2025"
-            time="10:00"
-            place="Novi Sad"
-            href="/workshops/yoga-breath"
-          />
+            key={card.slug}
+            name={card.name}
+            description={card.description}
+            date={card.date}
+            time={card.time}
+            place={card.place}
+            href={card.href}
+          />)}
+          
         </div>
       </section>
       <section id="blog-section" className="scroll-mt-20 p-6 max-w-4xl mx-auto">

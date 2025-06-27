@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 type WorkshopCardProps = {
   name: string;
   description: string;

@@ -1,29 +1,13 @@
+//import Image from "next/image";
+import { workshopData } from "@/lib/workshopData";
+
 type Props = {
   params: { slug: string };
 };
 
-const workshopData = {
-  "intro-to-somatics": {
-    name: "Intro to Somatics",
-    date: "25.06.2025",
-    time: "12:25",
-    place: "Belgrade",
-    image: "/somatics.jpg",
-    description: `A detailed introduction to somatic body practices...`,
-    registerUrl: "https://docs.google.com/forms/u/0/",
-  },
-  "yoga-breath": {
-    name: "Yoga & Breath",
-    date: "12.07.2025",
-    time: "10:00",
-    place: "Novi Sad",
-    image: "/yoga.jpg",
-    description: `Learn to breathe deeply and mindfully in your yoga...`,
-    registerUrl: "https://docs.google.com/forms/u/0/",
-  },
-};
 
-export default function WorkshopPage({ params }: Props) {
+
+export default async function WorkshopPage({ params }: Props) {
   const workshop = workshopData[params.slug as keyof typeof workshopData];
 
   if (!workshop) return <p className="text-center mt-32 text-red-600">Workshop not found</p>;
