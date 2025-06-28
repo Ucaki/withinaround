@@ -46,7 +46,7 @@ export default function AboutPage() {
         </div>
         </div>
       </section>
-      <section id="workshop-section" className="scroll-mt-20 p-6 max-w-4xl mx-auto">
+      <section id="workshop-section" className="scroll-mt-20 p-6 max-w-4xl mx-auto text-black">
         <hr className="rounded border-t-4 border-gray-600" />
         <h1 className="text-center font-bold text-4xl mt-10 mb-6 underline">
           Upcoming Workshops
@@ -69,7 +69,7 @@ export default function AboutPage() {
       </section>
       <section id="blog-section" className="scroll-mt-20 p-6 max-w-4xl mx-auto">
         <hr className="rounded border-t-4 border-gray-600" />
-        <h1 className="text-center font-bold text-4xl mt-10 mb-6 underline">
+        <h1 className="text-center font-bold text-4xl mt-10 mb-6 underline text-black">
           Blog
         </h1>
         <p className="break-words text-center">Blog brate Bruklin brate blog Bruklin bato</p>

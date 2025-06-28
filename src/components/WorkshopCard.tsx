@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 type WorkshopCardProps = {
   name: string;
   description: string;
@@ -18,11 +19,11 @@ export default function WorkshopCard({
   href,
 }: WorkshopCardProps) {
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-4 border-yellow-800 rounded-xl p-4 shadow-md bg-white hover:bg-yellow-50 transition">
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-4 border-[#1A5F7A] rounded-xl p-4 shadow-md bg-white hover:bg-yellow-50 transition">
       {/* Left: Description */}
-      <div className="text-gray-800 max-w-sm">
+      <div className="text-black max-w-sm">
         
-        <Link href={href} className="font-semibold italic text-yellow-800 hover:underline">
+        <Link href={href} className="font-semibold italic text-black hover:underline">
           {name}
         </Link>{" "}
         -<br/> {description}

@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
   
-    <header className="w-screen bg-yellow-800 text-white p-1  flex items-center fixed">
+    <header className="w-screen bg-[#1A5F7A] text-white p-1  flex items-center fixed h-16 sm:h-22">
       <div className="relative w-24 h-12 sm:w-32 md:w-44 sm:h-16 md:h-20 mx-2 my-auto mr-20">
                <Link href='/'><Image
                  src="/withinaroundLogo.png"
@@ -36,9 +36,10 @@ export default function Navbar() {
       </nav>
 
       {menuOpen && (
-        <nav className="sm:hidden flex flex-col items-center bg-yellow-800 py-1 px-1 font-semibold text-xs">
-          <ul >
-            <li><Link onClick={() => setMenuOpen(false)} href="/#about-section" className='hover:text-slate-400'>About</Link></li>
+        //"sm:hidden flex flex-col items-center bg-[#1A5F7A] py-1 px-1 justify-around font-semibold text-xs"
+        <nav className="absolute top-16 left-[50%] w-2/4 bg-[#1A5F7A] z-50 flex flex-col items-start pl-10  h-200 gap-6 text-white">
+          <ul>
+            <li ><Link onClick={() => setMenuOpen(false)} href="/#about-section" className='hover:text-slate-400'>About</Link></li>
             <li><Link onClick={() => setMenuOpen(false)} href="/#workshop-section" className='hover:text-slate-400'>Workshops</Link></li>
             <li><Link onClick={() => setMenuOpen(false)} href="/#blog-section" className='hover:text-slate-400'>Blog</Link></li>
         </ul>
