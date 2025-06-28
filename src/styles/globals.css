@@ -3,6 +3,9 @@
 :root {
   --background: rgb(217, 223, 215);
   --foreground: rgb(71, 74, 73);
+  --primaryDeepBlue: #1A5F7A;
+  --secundaryText: #BACFD7;
+  --accentColor: #F8E16C;
 }
 
 @theme inline {
