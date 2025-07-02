@@ -30,6 +30,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta charSet="UTF-8" />
+      </head>
       <body className="bg-white text-gray-900">
         <Navbar />
         <main className="p-4" style={{backgroundColor: 'rgb(217, 223, 215)', color: 'rgb(71, 74, 73)' }}>{children}</main>
