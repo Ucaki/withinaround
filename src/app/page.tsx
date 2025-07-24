@@ -1,9 +1,13 @@
 // src/app/page.tsx
 import Image from "next/image";
+//import WorkshopCard from "@/components/WorkshopCard";
+//import { workshopList } from "@/lib/workshopData";
 import WorkshopCard from "@/components/WorkshopCard";
-import { workshopList } from "@/lib/workshopData";
+import { prisma } from "@/lib/prisma";
 
-export default function AboutPage() {
+
+export default async function AboutPage() {
+const workshops= await prisma.workshop.findMany();
   return (
     <div >
       <section id="about-section" className="max-w-4xl mx-auto py-12 px-6 pt-24 scroll-mt-20">
@@ -54,7 +58,7 @@ export default function AboutPage() {
 
         <div className="space-y-4">
           {/* Workshop card */}
-          {workshopList.map((card)=>
+   {/*       {workshopList.map((card)=>
           <WorkshopCard
             key={card.slug}
             name={card.name}
@@ -64,7 +68,18 @@ export default function AboutPage() {
             place={card.place}
             href={card.href}
           />)}
-          
+        */}
+        {workshops.map((w) => (
+          <WorkshopCard
+            key={w.slug}
+            name={w.name}
+            description={w.description}
+            date={w.date.toISOString().slice(0,10)} // Format date to YYYY-MM-DD
+            time={w.time}
+            place={w.location}
+            href={`/workshops/${w.slug}`}
+          />
+        ))} 
         </div>
       </section>
       <section id="blog-section" className="scroll-mt-20 p-6 max-w-4xl mx-auto">
@@ -77,3 +92,4 @@ export default function AboutPage() {
     </div>
   );
 }
+
